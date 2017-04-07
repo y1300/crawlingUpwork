@@ -1,23 +1,46 @@
-# crawlingUpwork
-# 我的第一个GitHub项目
+## crawlingUpwork
 
-这是项目 [helloworld](https://github.com/gotgithub/helloworld) ，
-欢迎访问。
+# items.jl
+items.jl is just a plain text file with each freelancer's profile on one line, the structure of each item is "key": "value" with commas separating itmes from each other.
 
-这个项目的版本库是 **Git格式** ，在 Windows、Linux、Mac OS X
-平台都有客户端工具可以访问。虽然版本库只提供Git一种格式，
-但是你还是可以用其他用其他工具访问，如 ``svn`` 和 ``hg`` 。
+The items including:
+- webpage: the webpage of this profile
+- id: the id of this freelancer
+- title: the title of this profile
+- name: freelancers' name
+- shortName: freelancers' name in short
+- description: the introduction of freelancer
+- location: where they live
+- portrait: the url of the photo on profile
+- skills: the skill of the freelancer
+- totalHours: hours working on Upwork.com in total
+- totalFeedback: feedbacks them gained in total
+- totalJobsWorked: jobs they took in history
+- rating: overall rating
+- hourlyRate: the prefered amount paid by hour
+- totalPortfolioItems: total number of portfolios shown on the porfile
+- englishLevel: freelancers' English level
+- memberSince: the date joined the Upwork.com
+- lastWorkedOn: the date of last job
+- hireAgainPercentage: the percentage of their jobs being hired by the same employer again
+- totalHourlyJobs: all the jobs being paid by hour
+- totalFixedJobs: all the jobs being paid by fixed amount
+- totalRevenue: total profit gained in history
+- skillTestsPassed: number of skill tests passed
+- portfolios: the descriptions of their portfolios
+- portfoliosImage: the images of portfolios
+- education: the education of freelancers
+- assignments_startedOn: the starting date of this job
+- assignments_endedOn: the ending date of this job
+- assignments_totalCharges: the earning of this job
+- assignments_totalHours: total lasting time of this job
+- assignments_hourlyRate: the amount paid by hour of this job
+- assignments_title: the title of this job
+- assignments_feedback_score: the rating of this job
+- assignments_feedback_comment: the comment of this job
 
-## 版本库地址
 
-支持三种访问协议：
 
-* HTTP协议: `https://github.com/gotgithub/helloworld.git` 。
-* Git协议: `git://github.com/gotgithub/helloworld.git` 。
-* SSH协议: `ssh://git@github.com/gotgithub/helloworld.git` 。
+## Clone
 
-## 克隆版本库
-
-操作示例：
-
-    $ git clone git://github.com/gotgithub/helloworld.git
+    $ git clone git://github.com/y1300/crawlingUpwork.git
