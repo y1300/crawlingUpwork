@@ -44,7 +44,7 @@ gives the id, name and corresponding sentiment score of one freelancer, based on
 
 The structure of the list is: each line represent one freelancer, consisting by the "sentiment score", "id", "name" and "description" in order, which separated by commas. The "id" can be used as following to access each profile.
 
-    $ https://www.upwork.com/o/profiles/users/~ + id
+    $ https://www.upwork.com/o/profiles/users/~id
 
 ## Clone
 
