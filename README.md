@@ -39,7 +39,12 @@ The items including:
 - assignments_feedback_score: the rating of this job
 - assignments_feedback_comment: the comment of this job
 
+# rankedBySentiments.txt
+gives the id, name and corresponding sentiment score of one freelancer, based on sentiment analysis on the descriptions of freelancers about themselves. The sentiment score is a float between [-1.0,1.0], and larger numbers are more positive.
 
+The structure of the list is: each line represent one freelancer, consisting by the "sentiment score", "id", "name" and "description" in order, which separated by commas. The "id" can be used as following to access each profile.
+
+    $ https://www.upwork.com/o/profiles/users/~ + id
 
 ## Clone
 
