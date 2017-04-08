@@ -45,6 +45,9 @@ gives the id, name and corresponding sentiment score of one freelancer, based on
 The structure of the list is: each line represent one freelancer, consisting by the "sentiment score", "id", "name" and "description" in order, which separated by commas. The "id" can be used as following to access each profile.
 
     $ https://www.upwork.com/o/profiles/users/~id
+    
+# Image
+The image.tar.gz contains all the portraits of the freelancers based in China (around 92% of them has uploaded photos), and the folder image/full contains a few examples of these photos.
 
 ## Clone
 
