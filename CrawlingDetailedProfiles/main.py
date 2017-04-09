@@ -1,5 +1,6 @@
 from scrapy import cmdline
 
+
 # To get the login page as an example
 # cmdline.execute("scrapy crawl login".split())
 
