@@ -27,5 +27,5 @@ with open(file,'r') as inf:
 # for d in dicts_from_file:
 	# if d['assignments_feedback_comment'] is not 0:
 	# print('Id: %s, Name: %s, Comments: %s' % (d['id'],d['name'],d['assignments_feedback_comment']))
-
+	
 pickle.dump(dicts_from_file, open("assignments_feedback_comment.p", "wb"))
