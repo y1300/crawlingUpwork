@@ -28,4 +28,4 @@ with open(file,'r') as inf:
 	# if d['assignments_feedback_comment'] is not 0:
 	# print('Id: %s, Name: %s, Comments: %s' % (d['id'],d['name'],d['assignments_feedback_comment']))
 	
-pickle.dump(dicts_from_file, open("assignments_feedback_comment.p", "wb"))
+pickle.dump(dicts_from_file, open("assignments_feedback_comment.p", "wb")) 
