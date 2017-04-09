@@ -2,6 +2,9 @@ import pickle
 from textblob import TextBlob
 import re
 
+'''
+Set tartget to 'description' or 'assignments_feedback_comment' to rank by descriptions or comments repectively
+'''
 target = 'description'
 # target = 'assignments_feedback_comment'
 
