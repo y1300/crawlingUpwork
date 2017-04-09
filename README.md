@@ -1,20 +1,21 @@
 ## Codes
 
-### Getting User IDs
-# getId.py
+# Crawling User Ids
+### getId.py
 To get IDs of freelancers used in the website. Should run several times to crawl as much ids as possible, due to limited number (500) of pages we can access at all times, the dynamical ordering of this IDs. Hidden IDs located in pages inaccessible can show up sometimes. These intermedia results are written in "Output.txt".
 
-# getId_tor.py
+### getId_tor.py
 To get IDs with dynamic ip addresses via Tor network. Increasing the chance of being blocked. These intermedia results are written in "Output.txt".
 
-# getUniqueId.py
+### getUniqueId.py
 To get IDs with no repetition from "Output.txt". Unique IDs are in "ids.txt"
 
+# Crawling Detailed Profiles
 
 
 ## Output
 
-# items.jl
+### items.jl
 items.jl is just a plain text file with each freelancer's profile on one line, the structure of each item is "key": "value" with commas separating itmes from each other.
 
 The items including:
@@ -53,14 +54,14 @@ The items including:
 - assignments_feedback_score: the rating of this job
 - assignments_feedback_comment: the comment of this job
 
-# rankedBySentiments.txt
+### rankedBySentiments.txt
 gives the id, name and corresponding sentiment score of one freelancer, based on sentiment analysis on the descriptions of freelancers about themselves. The sentiment score is a float between [-1.0,1.0], and larger numbers mean more positive sentiments and thus resulting in higher ranking.
 
 The structure of the list is: each line represent one freelancer, consisting by the "sentiment score", "id", "name" and "description" in order, which separated by commas. The "id" can be used as following to access each profile.
 
     $ https://www.upwork.com/o/profiles/users/~id
     
-# Image
+### Image
 The image.tar.gz contains all the portraits of the freelancers based in China (around 92% of them has uploaded photos), and the folder image/full contains a few examples of these photos.
 
 ## Clone
