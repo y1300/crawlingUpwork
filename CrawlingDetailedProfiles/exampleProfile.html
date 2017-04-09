@@ -1,0 +1,854 @@
+<html lang="en">
+<head>
+        <meta name="google-site-verification" content="8LSdxYDqP_frCyFHVoOuiAip3CGyk8gZZygtNqwQhoM">
+    <meta name="robots" content="noodp,nodir,noydir">
+    <meta name="robots" content="noarchive">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQIBUF5RGwICV1ZTAQAP"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];n.exports=u;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(m,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+    <link rel="canonical" href="https://www.upwork.com/o/profiles/users/_~01e200ab864accf375/">
+    <link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.upwork.com/mobile/freelancers/~01e200ab864accf375">
+    <link rel="amphtml" href="https://www.upwork.com/mobile/amp/freelancers/~01e200ab864accf375">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.upwork.com/o/profiles/users/_~01e200ab864accf375/">
+    <meta property="og:site_name" content="Upwork">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@Upwork">
+        <meta property="og:title" content="Ali Farooq">
+    <meta property="og:description" content='Currently the CEO/senior programmer at "AlfaBolt". A small firm based in Islamabad, Pakistan which focuses on innovative IT solutions
+
+***PAST EXPERIENCE***
+Senior Developer - Chartertree
+Director Web &amp; IT - NUST Internations Model United Nations
+Director Web &amp; IT UNIDO - BGT International Conference
+Former Web &amp; IT director at Beijing Forum, Islamabad.
+Senior Developer - ALMIN Apps.
+Senior Developer - RJ Applications
+Senior Tutorial manager for SHAUN SPALDING
+
+My expertise include web design and server side  development, mobile app development(Android, iOS, Universal Windows App), C++, DBMS etc.
+
+Web Projects:
+    ASP.NET MVC:
+     1. Website for Beijing Forum International Conference Islamabad
+     2. Chartertree (an entire software solution for management of yachtes for yacht owners, brokers, crew, clients and much more) in progress.
+   
+    PHP (Laravel):
+    1. NUST International Model United Nations
+    2. EInsure
+    3. BGT Conference
+
+C++ projects:
+    1. Data Encryption (key generation algorithms)
+    2. Data manipulation (generating statistics based on collected data)
+    3. Game Development (Brick Breaker)
+    4. Image processing (PPM editor)
+
+Android Projects:
+    1. Security App for NUST International Model United Nations
+    2. Informative App for NUST International Model United Nations
+    3. App for BGT Conference - USAID, UNIDO
+    4. Copter Escapade (Game)
+    5. Escape The Trap (Game)
+
+IOS Projects:
+    1. Beijing Forum 2016 iOS app
+    2. Security App for NUST International Model United Nations'>
+    <meta property="og:image" content="https://odesk-prod-portraits.s3.amazonaws.com/Users:alifarooq96:PortraitUrl?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&amp;Expires=2147483647&amp;Signature=GC0eJeGxXl3J8ah2EePNrCRJKyM%3D&amp;1441745077085262">
+    <meta name="twitter:title" content="Ali Farooq">
+    <meta name="twitter:description" content='Currently the CEO/senior programmer at "AlfaBolt". A small firm based in Islamabad, Pakistan which focuses on innovative IT solutions
+
+***PAST EXPERIENCE***
+Senior Developer - Chartertree
+Director Web &amp; IT - NUST Internations Model United Nations
+Director Web &amp; IT UNIDO - BGT International Conference
+Former Web &amp; IT director at Beijing Forum, Islamabad.
+Senior Developer - ALMIN Apps.
+Senior Developer - RJ Applications
+Senior Tutorial manager for SHAUN SPALDING
+
+My expertise include web design and server side  development, mobile app development(Android, iOS, Universal Windows App), C++, DBMS etc.
+
+Web Projects:
+    ASP.NET MVC:
+     1. Website for Beijing Forum International Conference Islamabad
+     2. Chartertree (an entire software solution for management of yachtes for yacht owners, brokers, crew, clients and much more) in progress.
+   
+    PHP (Laravel):
+    1. NUST International Model United Nations
+    2. EInsure
+    3. BGT Conference
+
+C++ projects:
+    1. Data Encryption (key generation algorithms)
+    2. Data manipulation (generating statistics based on collected data)
+    3. Game Development (Brick Breaker)
+    4. Image processing (PPM editor)
+
+Android Projects:
+    1. Security App for NUST International Model United Nations
+    2. Informative App for NUST International Model United Nations
+    3. App for BGT Conference - USAID, UNIDO
+    4. Copter Escapade (Game)
+    5. Escape The Trap (Game)
+
+IOS Projects:
+    1. Beijing Forum 2016 iOS app
+    2. Security App for NUST International Model United Nations'>
+    <meta name="twitter:image" content="https://odesk-prod-portraits.s3.amazonaws.com/Users:alifarooq96:PortraitUrl?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&amp;Expires=2147483647&amp;Signature=GC0eJeGxXl3J8ah2EePNrCRJKyM%3D&amp;1441745077085262">
+    <meta name="Description" content='Currently the CEO/senior programmer at "AlfaBolt". A small firm based in Islamabad, Pakistan which focuses on innovative IT solutions
+
+***PAST EXPERIENCE***
+Senior Developer - Chartertree
+Director Web &amp; IT - NUST Internations Model United Nations
+Director Web &amp; IT UNIDO - BGT International Conference
+Former Web &amp; IT director at Beijing Forum, Islamabad.
+Senior Developer - ALMIN Apps.
+Senior Developer - RJ Applications
+Senior Tutorial manager for SHAUN SPALDING
+
+My expertise include web design and server side  development, mobile app development(Android, iOS, Universal Windows App), C++, DBMS etc.
+
+Web Projects:
+    ASP.NET MVC:
+     1. Website for Beijing Forum International Conference Islamabad
+     2. Chartertree (an entire software solution for management of yachtes for yacht owners, brokers, crew, clients and much more) in progress.
+   
+    PHP (Laravel):
+    1. NUST International Model United Nations
+    2. EInsure
+    3. BGT Conference
+
+C++ projects:
+    1. Data Encryption (key generation algorithms)
+    2. Data manipulation (generating statistics based on collected data)
+    3. Game Development (Brick Breaker)
+    4. Image processing (PPM editor)
+
+Android Projects:
+    1. Security App for NUST International Model United Nations
+    2. Informative App for NUST International Model United Nations
+    3. App for BGT Conference - USAID, UNIDO
+    4. Copter Escapade (Game)
+    5. Escape The Trap (Game)
+
+IOS Projects:
+    1. Beijing Forum 2016 iOS app
+    2. Security App for NUST International Model United Nations'>
+    
+    <title>        Ali Farooq
+     - Web Development, ASP.NET MVC C#, C/C++, Android Dev,  iOS dev - Upwork Freelancer from islamabad, Pakistan
+</title>
+
+    <script type="text/javascript">
+      function create_mark(name) {
+        window.performance && window.performance.mark && window.performance.mark(name);
+      }
+
+      function remove_mark(name) {
+        window.performance && window.performance.clearMarks && window.performance.clearMarks(name);
+      }
+
+      function create_measure(name, startMark, endMark) {
+        window.performance && window.performance.measure && window.performance.measure(name, startMark, endMark);
+      }
+
+      function remove_measure(name) {
+        window.performance && window.performance.clearMeasures && window.performance.clearMeasures(name);
+      }
+    </script>
+
+                            <link rel="stylesheet" href="https://www.upwork.com/static/components/2.6.0/air.global.2.6.0.min.css" onload="remove_mark('navCompRenderEnd');remove_measure('navCompRendered');create_mark('navCompRenderEnd');create_measure('navCompRendered', 'navigationStart', 'navCompRenderEnd');">
+                    <link rel="stylesheet" href="https://www.upwork.com/static/components/2.6.0/air.components.2.6.0.min.css" onload="remove_mark('navCompRenderEnd');remove_measure('navCompRendered');create_mark('navCompRenderEnd');create_measure('navCompRendered', 'navigationStart', 'navCompRenderEnd');">
+                    <link rel="stylesheet" href="https://www.upwork.com/static/fonts/1.12.0/fonts.gotham.1.12.0.css" onload="remove_mark('navCompRenderEnd');remove_measure('navCompRendered');create_mark('navCompRenderEnd');create_measure('navCompRendered', 'navigationStart', 'navCompRenderEnd');">
+                    <link rel="stylesheet" href="https://www.upwork.com/static/fonts/1.12.0/fonts.air-icons.1.12.0.css" onload="remove_mark('navCompRenderEnd');remove_measure('navCompRendered');create_mark('navCompRenderEnd');create_measure('navCompRendered', 'navigationStart', 'navCompRenderEnd');">
+            
+    <link rel="stylesheet" href="https://www.upwork.com/static/fe/webpack/release/rel20170405125416934/profile-vendor-es6.min.css">
+    <link rel="stylesheet" href="https://www.upwork.com/static/fe/webpack/release/rel20170405125416934/profile-es6.min.css">
+            <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+                        <link rel="preload" href="https://www.upwork.com/static/fonts/1.12.0/fonts.gotham-async.1.12.0.css" as="style" onload="this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="https://www.upwork.com/static/fonts/1.12.0/fonts.gotham-async.1.12.0.css"></noscript>
+                    <link rel="preload" href="https://www.upwork.com/static/fonts/1.12.0/fonts.air-icons-async.1.12.0.css" as="style" onload="this.rel='stylesheet'">
+            <noscript><link rel="stylesheet" href="https://www.upwork.com/static/fonts/1.12.0/fonts.air-icons-async.1.12.0.css"></noscript>
+                <script type="text/javascript">!function(a){var b=function(b,c,d){function j(a){return e.body?a():void setTimeout(function(){j(a)})}function l(){f.addEventListener&&f.removeEventListener("load",l),f.media=d||"all"}var g,e=a.document,f=e.createElement("link");if(c)g=c;else{var h=(e.body||e.getElementsByTagName("head")[0]).childNodes;g=h[h.length-1]}var i=e.styleSheets;f.rel="stylesheet",f.href=b,f.media="only x",j(function(){g.parentNode.insertBefore(f,c?g:g.nextSibling)});var k=function(a){for(var b=f.href,c=i.length;c--;)if(i[c].href===b)return a();setTimeout(function(){k(a)})};return f.addEventListener&&f.addEventListener("load",l),f.onloadcssdefined=k,k(l),f};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);</script>
+        <script type="text/javascript">!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);</script>
+    
+    <script type="text/javascript">
+    // global Applet object
+    var Applet = new function() {
+        var basePath = '/freelancers';
+        var phpVars = {"csrfTokenCookieName":"XSRF-TOKEN","csrfTokenHeaderName":"X-Odesk-Csrf-Token","runtime_id":"34cf9632795069d1-LHR","clientStatsDMetrics":true,"smfAjax":false,"NotificationASIntegration":false,"disputesASIntegration":false,"pageSpeedMetrics":false,"ccstCookieName":"oauth2_global_js_token","account_security_base_url":"\/ab\/account-security","pageId":"flPublicProfile","profileSettings":{"csrfTokenCookieName":null,"csrfTokenHeaderName":null,"runtime_id":null,"clientStatsDMetrics":null,"scrubbingFlags":[],"smfAjax":null,"profile":{"identity":{"userId":null,"ciphertext":"~01e200ab864accf375","recno":8654824,"legacyCiphertext":"~~36adb74874c21b14","uid":"641323657512689664","edcUserId":0},"profile":{"name":"Ali Farooq","shortName":"Ali F.","title":"Web Development, ASP.NET MVC C#, C\/C++, Android Dev,  iOS dev","description":"Currently the CEO\/senior programmer at \"AlfaBolt\". A small firm based in Islamabad, Pakistan which focuses on innovative IT solutions\n\n***PAST EXPERIENCE***\nSenior Developer - Chartertree\nDirector Web & IT - NUST Internations Model United Nations\nDirector Web & IT UNIDO - BGT International Conference\nFormer Web & IT director at Beijing Forum, Islamabad.\nSenior Developer - ALMIN Apps.\nSenior Developer - RJ Applications\nSenior Tutorial manager for SHAUN SPALDING\n\nMy expertise include web design and server side  development, mobile app development(Android, iOS, Universal Windows App), C++, DBMS etc.\n\nWeb Projects:\n    ASP.NET MVC:\n     1. Website for Beijing Forum International Conference Islamabad\n     2. Chartertree (an entire software solution for management of yachtes for yacht owners, brokers, crew, clients and much more) in progress.\n   \n    PHP (Laravel):\n    1. NUST International Model United Nations\n    2. EInsure\n    3. BGT Conference\n\nC++ projects:\n    1. Data Encryption (key generation algorithms)\n    2. Data manipulation (generating statistics based on collected data)\n    3. Game Development (Brick Breaker)\n    4. Image processing (PPM editor)\n\nAndroid Projects:\n    1. Security App for NUST International Model United Nations\n    2. Informative App for NUST International Model United Nations\n    3. App for BGT Conference - USAID, UNIDO\n    4. Copter Escapade (Game)\n    5. Escape The Trap (Game)\n\nIOS Projects:\n    1. Beijing Forum 2016 iOS app\n    2. Security App for NUST International Model United Nations","location":{"country":"Pakistan","city":"islamabad","state":null,"countryTimezone":"UTC+05:00 Islamabad, Karachi","worldRegion":"islamabad, Pakistan (UTC+05:00)","timezoneOffset":18000,"countryCodeIso2":"PK","countryCodeIso3":"PAK","countryCode":"PAK"},"portrait":{"portrait":"https:\/\/odesk-prod-portraits.s3.amazonaws.com\/Users:alifarooq96:PortraitUrl?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&Expires=2147483647&Signature=GC0eJeGxXl3J8ah2EePNrCRJKyM%3D&1441745077085262","bigPortrait":"https:\/\/odesk-prod-portraits.s3.amazonaws.com\/Users:alifarooq96:PortraitUrl_100?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&Expires=2147483647&Signature=QS3%2BnFIysffQ6Yt6fRor7%2FIRN7E%3D&1441745077085262","smallPortrait":"https:\/\/odesk-prod-portraits.s3.amazonaws.com\/Users:alifarooq96:PortraitUrl_50?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&Expires=2147483647&Signature=MKSioxqFt9G6840nSeWGFHBzDAk%3D&1441745077085262","originalPortrait":"https:\/\/odesk-prod-portraits.s3.amazonaws.com\/Users:alifarooq96:PortraitUrl_original?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&Expires=2147483647&Signature=NiGiiO2og5xlvbOx48e2wr2CZTk%3D&1441745077085262"},"skills":[{"name":"android-app-development","prettyName":"Android App Development","active":false,"testsCount":0,"hasTests":true,"uid":"475721704297889804","rank":1,"description":"Android software development is the process by which new applications are created for the Android operating system. Applications are usually developed in the Java programming language using the Android Software Development Kit, but other development tools are available.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/Android_SDK","tests":null,"certificates":null},{"name":"java","prettyName":"Java","active":false,"testsCount":0,"hasTests":true,"uid":"475721704021065736","rank":2,"description":"Java is a programming language and a core component of Oracle Corporation's Java Platform. The language derives much of its syntax from C and C++ but has a simpler object model and fewer low-level facilities.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/Java_(programming)","tests":null,"certificates":null},{"name":"c++","prettyName":"C++","active":false,"testsCount":0,"hasTests":true,"uid":"475721703756824577","rank":3,"description":"C++ (pronounced \"cee plus plus\") is a statically typed, free-form, multi-paradigm, compiled, general-purpose programming language. It is regarded as an intermediate-level language, as it comprises a combination of both high-level and low-level language features.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/C++","tests":null,"certificates":null},{"name":"c","prettyName":"C","active":true,"testsCount":1,"hasTests":true,"uid":"475721703752630275","rank":4,"description":"C (pronounced like the letter C) is a general-purpose computer programming language developed between 1969 and 1973 by Dennis Ritchie at the Bell Telephone Laboratories for use with the Unix operating system.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/C_(programming_language)","tests":null,"certificates":null},{"name":"opengl","prettyName":"OpenGL","active":false,"testsCount":0,"hasTests":true,"uid":"475721704104951808","rank":5,"description":"OpenGL (Open Graphics Library) is a standard specification defining a cross-language, cross-platform API for writing applications that produce 2D and 3D computer graphics.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/OpenGL","tests":null,"certificates":null},{"name":"sdlx","prettyName":"SDLX","active":false,"testsCount":0,"hasTests":false,"uid":"475721704457273344","rank":6,"description":"SDL Trados is a computer assisted translation software suite. It provides translation memory and terminology management.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/SDL_Trados","tests":null,"certificates":null},{"name":"css3","prettyName":"CSS3","active":false,"testsCount":0,"hasTests":true,"uid":"475721704339832832","rank":7,"description":"Cascading Style Sheets (CSS) is a style sheet language used to describe the presentation (that is, the look and formatting) of a document written in a markup language.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/Cascading_Style_Sheets","tests":null,"certificates":null},{"name":"html5","prettyName":"HTML5","active":false,"testsCount":0,"hasTests":true,"uid":"475721704390164481","rank":8,"description":"HTML5 is a language for structuring and presenting content for the World Wide Web, and is a core technology of the Internet originally proposed by Opera Software. It is the fifth revision of the HTML standard.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/HTML_5","tests":null,"certificates":null},{"name":"bootstrap","prettyName":"Bootstrap","active":false,"testsCount":0,"hasTests":true,"uid":"514995534568812544","rank":9,"description":"Bootstrap is a popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.","externalUrl":"http:\/\/getbootstrap.com\/","tests":null,"certificates":null},{"name":"javascript","prettyName":"JavaScript","active":false,"testsCount":0,"hasTests":true,"uid":"475721704021065738","rank":10,"description":"JavaScript is a prototype-based scripting language that is dynamic, weakly typed and has first-class functions. It is a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.","externalUrl":"http:\/\/en.wikipedia.org\/wiki\/JavaScript","tests":null,"certificates":null}],"visibility":1,"isDisabled":false,"affiliated":false,"isLooking":false,"isLookingWeek":false,"exposeFullName":true,"confidentialityBound":false,"isConsoleViewable":false,"isSearchable":false,"agencyRef":null,"idVerified":false,"exposeBillings":true,"pci":{"action":null,"actionCredit":0,"actual":130,"ts":"1490562248","display":100},"phoneVerified":false,"state":"Accepted","hideAgencyEarnings":false,"contractorTier":2,"exclusiveAgencyContractor":false,"hideJss":false},"stats":{"totalHours":200.16666667,"totalHoursRecent":0,"totalFeedback":14,"totalFeedbackRecent":0,"totalJobsWorked":14,"totalJobsWorkedRecent":1,"rating":5,"ratingRecent":0,"hourlyRate":{"currencyCode":"USD","amount":33},"totalPortfolioItems":9,"englishLevel":5,"memberSince":"2015-09-08T00:00:00.000Z","lastWorkedOn":"2016-10-11T00:00:00.000Z","hireAgainPercentage":81.81818181818183,"totalHourlyJobs":3,"totalHourlyJobsRecent":0,"totalFixedJobs":13,"totalFixedJobsRecent":1,"isRecommended":false,"responsiveState":"within_a_day","privateFeedbackHireAgain":0,"scores":0,"totalRevenue":9300.4,"skillTestsPassed":0,"activeInterviews":0,"activeAssignments":0,"nSS100BwScore":0.94,"topRatedStatus":"top_rated","totalHoursActual":200.16,"edcAssignments":0,"nSS100PtScore":94},"video":null,"groups":null,"tests":[{"name":"C Programming Test","score":78,"duration":14,"isPassed":true,"rank":7509,"percentile":78,"id":13225943,"dateTaken":"2015-10-22T00:00:00.000Z","provider":"oDesk","visibility":1},{"name":"U.S. English Basic Skills Test","score":80,"duration":11,"isPassed":true,"rank":267944,"percentile":73,"id":13006738,"dateTaken":"2015-09-14T00:00:00.000Z","provider":"Expert Rating","visibility":1},{"name":"MS Excel 2007 Test","score":70,"duration":13,"isPassed":true,"rank":25313,"percentile":71,"id":12995240,"dateTaken":"2015-09-12T00:00:00.000Z","provider":"Expert Rating","visibility":1}],"agencies":null,"portfolios":null,"competencies":null,"assignments":[{"startedOn":"2016-08-01T00:00:00.000Z","endedOn":"2016-09-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":500},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Live Trivia matchups Online","feedback":{"score":5,"comment":"Ali was excellent to work with. He went above and beyond what I asked for. Highly recommend!","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"1601738","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":500},"hoursPerWeek":0,"openingRid":"208138476","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"It was great working with Johnny. He's a great client.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"16755369","isEdc":false,"ciphertext":"~011f74a365ec733f27","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-12-01T00:00:00.000Z","endedOn":"2016-06-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":1555.84},"totalHours":153,"hourlyRate":{"currencyCode":"USD","amount":10.5},"type":2,"title":"Making tutorials about app development and programming","feedback":{"score":5,"comment":"We appreciate your help on this project","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"1075430","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":0},"hoursPerWeek":0,"openingRid":"206468324","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"It has been great working with Angela and Shaun. One of the best client that i have worked with. I would definitely be interested in working with them again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15647327","isEdc":false,"ciphertext":"~010f002c414195ebc3","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2016-02-01T00:00:00.000Z","endedOn":"2016-04-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":300},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Android Studio - Simple 2D Game - Personal use - NOT to put it in play store","feedback":{"score":5,"comment":"One of the best freelancers. It was a pleasure working with him. I definetly suggest him to anyone","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"2477365","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":300},"hoursPerWeek":0,"openingRid":"206992218","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Great client :) Easy to work with. He sets reasonable deadlines and is very understanding. I would love to work with him again (Y)","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15968223","isEdc":false,"ciphertext":"~01fa7488379143f6e3","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2016-02-01T00:00:00.000Z","endedOn":"2016-04-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":702.5},"totalHours":47,"hourlyRate":{"currencyCode":"USD","amount":15},"type":2,"title":"Need training in PHP, Javascript and HTML 5","feedback":{"score":5,"comment":"Very smart guy, and very knowledgeable. I am very happy to have met Ali and work with him. I would consider him an Ace.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"2292645","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":0},"hoursPerWeek":0,"openingRid":"206992231","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Great client. He is great to work with and always very understanding. I would love to work with him again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15966329","isEdc":false,"ciphertext":"~01dd798b36c3d142a1","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2016-01-01T00:00:00.000Z","endedOn":"2016-02-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":45},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Compiler. DAF (Deterministic Finite Automata)","feedback":{"score":5,"comment":"Excellent and perfect. He read carefully the instructions and did exactly what's in it.\r\n\r\nWell known in his field","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"2488269","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":45},"hoursPerWeek":0,"openingRid":"206816720","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":4.7,"comment":null,"commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":3,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15854705","isEdc":false,"ciphertext":"~0157c5518a3c4f3720","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-11-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":200.01},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"App development","feedback":{"score":5,"comment":"Very easy to work with, understanding and and communicates effectively. Would definitely recommend","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"546091","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":200},"hoursPerWeek":0,"openingRid":"206073072","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Richard had reasonable demands and was a great client. He responded to questions in reasonable time. This was my first large project with him and I'd be looking forward to work with him again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15480716","isEdc":false,"ciphertext":"~01aa04494b0a20f552","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-11-01T00:00:00.000Z","endedOn":"2015-11-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":50},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Program a customized Android \"Winterballs Game\".","feedback":{"score":5,"comment":"It was a pleasure to work with Ali. He is a great developer and a very good communicator. He was able to deliver the project before the deadline and was continously easy to contact. I undoubtedly suggest Ali to everyone who wants to get the job done.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from Switzerland in a ","clientId":"2311326","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":50},"hoursPerWeek":0,"openingRid":"206336812","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Good client (Y)","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15557883","isEdc":false,"ciphertext":"~0132a449e297bb880b","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-10-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":5},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"App development","feedback":{"score":5,"comment":null,"commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"546091","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":5},"hoursPerWeek":0,"openingRid":"206073072","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"I'm glad to have worked with Richard. Wonderful client.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15456109","isEdc":false,"ciphertext":"~01aa04494b0a20f552","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-10-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":20},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"App development","feedback":{"score":5,"comment":null,"commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"546091","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":20},"hoursPerWeek":0,"openingRid":"206073072","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Wonderful client. He is always very understanding. This was my second project with him. I would always be willing to work with him again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15446457","isEdc":false,"ciphertext":"~01aa04494b0a20f552","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-10-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":11},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"A simple C++ OpenGL program (Visual Studio)","feedback":{"score":5,"comment":"Ali is a wonderful intelligent programmer. He is very smart and he delivered as promised. He did a great job and gave great support. He replied mail almost in real time.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"843792","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":11},"hoursPerWeek":0,"openingRid":"206149419","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Wonderful client. I would be willing to work with this client again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15436511","isEdc":false,"ciphertext":"~0199df442f25d26fe0","isPtc":false,"isOpeningVisible":true,"accessType":1}],"availability":{"availabilityTs":null,"source":"profile_ui","uid":"739516644423983104","personUid":"641323657512689664","capacity":{"nid":"fullTime","name":"More than 30 hrs\/week"},"creationTs":"2016-06-05T17:58:02Z"},"clientRelationship":null,"languages":null,"certificates":null,"employmentHistory":null,"education":null,"otherExperiences":null,"esn":[],"jobCategoriesV2":[{"groupUid":"531770282580668418","groupName":"Web, Mobile & Software Dev","selectedCategories":[{"uid":"531770282589057025","name":"Desktop Software Development"},{"uid":"531770282589057024","name":"Mobile Development"},{"uid":"531770282589057027","name":"Game Development"},{"uid":"531770282589057032","name":"Other - Software Development"}]}],"assignmentsInProgress":[],"assignmentsEnded":{"pageNumber":1,"itemsPerPage":10,"totalItems":11,"sortOrder":1,"assignments":[{"startedOn":"2016-08-01T00:00:00.000Z","endedOn":"2016-09-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":500},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Live Trivia matchups Online","feedback":{"score":5,"comment":"Ali was excellent to work with. He went above and beyond what I asked for. Highly recommend!","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"1601738","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":500},"hoursPerWeek":0,"openingRid":"208138476","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"It was great working with Johnny. He's a great client.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"16755369","isEdc":false,"ciphertext":"~011f74a365ec733f27","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-12-01T00:00:00.000Z","endedOn":"2016-06-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":1555.84},"totalHours":153,"hourlyRate":{"currencyCode":"USD","amount":10.5},"type":2,"title":"Making tutorials about app development and programming","feedback":{"score":5,"comment":"We appreciate your help on this project","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"1075430","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":0},"hoursPerWeek":0,"openingRid":"206468324","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"It has been great working with Angela and Shaun. One of the best client that i have worked with. I would definitely be interested in working with them again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15647327","isEdc":false,"ciphertext":"~010f002c414195ebc3","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2016-02-01T00:00:00.000Z","endedOn":"2016-04-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":300},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Android Studio - Simple 2D Game - Personal use - NOT to put it in play store","feedback":{"score":5,"comment":"One of the best freelancers. It was a pleasure working with him. I definetly suggest him to anyone","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"2477365","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":300},"hoursPerWeek":0,"openingRid":"206992218","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Great client :) Easy to work with. He sets reasonable deadlines and is very understanding. I would love to work with him again (Y)","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15968223","isEdc":false,"ciphertext":"~01fa7488379143f6e3","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2016-02-01T00:00:00.000Z","endedOn":"2016-04-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":702.5},"totalHours":47,"hourlyRate":{"currencyCode":"USD","amount":15},"type":2,"title":"Need training in PHP, Javascript and HTML 5","feedback":{"score":5,"comment":"Very smart guy, and very knowledgeable. I am very happy to have met Ali and work with him. I would consider him an Ace.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"2292645","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":0},"hoursPerWeek":0,"openingRid":"206992231","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Great client. He is great to work with and always very understanding. I would love to work with him again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15966329","isEdc":false,"ciphertext":"~01dd798b36c3d142a1","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2016-01-01T00:00:00.000Z","endedOn":"2016-02-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":45},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Compiler. DAF (Deterministic Finite Automata)","feedback":{"score":5,"comment":"Excellent and perfect. He read carefully the instructions and did exactly what's in it.\r\n\r\nWell known in his field","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"2488269","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":45},"hoursPerWeek":0,"openingRid":"206816720","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":4.7,"comment":null,"commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":3,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15854705","isEdc":false,"ciphertext":"~0157c5518a3c4f3720","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-11-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":200.01},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"App development","feedback":{"score":5,"comment":"Very easy to work with, understanding and and communicates effectively. Would definitely recommend","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"546091","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":200},"hoursPerWeek":0,"openingRid":"206073072","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Richard had reasonable demands and was a great client. He responded to questions in reasonable time. This was my first large project with him and I'd be looking forward to work with him again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15480716","isEdc":false,"ciphertext":"~01aa04494b0a20f552","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-11-01T00:00:00.000Z","endedOn":"2015-11-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":50},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"Program a customized Android \"Winterballs Game\".","feedback":{"score":5,"comment":"It was a pleasure to work with Ali. He is a great developer and a very good communicator. He was able to deliver the project before the deadline and was continously easy to contact. I undoubtedly suggest Ali to everyone who wants to get the job done.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from Switzerland in a ","clientId":"2311326","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":50},"hoursPerWeek":0,"openingRid":"206336812","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Good client (Y)","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15557883","isEdc":false,"ciphertext":"~0132a449e297bb880b","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-10-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":5},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"App development","feedback":{"score":5,"comment":null,"commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"546091","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":5},"hoursPerWeek":0,"openingRid":"206073072","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"I'm glad to have worked with Richard. Wonderful client.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15456109","isEdc":false,"ciphertext":"~01aa04494b0a20f552","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-10-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":20},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"App development","feedback":{"score":5,"comment":null,"commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United Kingdom in a ","clientId":"546091","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":20},"hoursPerWeek":0,"openingRid":"206073072","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Wonderful client. He is always very understanding. This was my second project with him. I would always be willing to work with him again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15446457","isEdc":false,"ciphertext":"~01aa04494b0a20f552","isPtc":false,"isOpeningVisible":true,"accessType":1},{"startedOn":"2015-10-01T00:00:00.000Z","endedOn":"2015-10-01T00:00:00.000Z","totalCharges":{"currencyCode":"USD","amount":11},"totalHours":0,"hourlyRate":{"currencyCode":"USD","amount":0},"type":1,"title":"A simple C++ OpenGL program (Visual Studio)","feedback":{"score":5,"comment":"Ali is a wonderful intelligent programmer. He is very smart and he delivered as promised. He did a great job and gave great support. He replied mail almost in real time.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of specifications\/instructions"},{"score":5,"label":"Quality","description":"quality of work deliverables"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"ability to complete tasks on time"},{"score":5,"label":"Communication","description":"communication skills, frequent progress updates, responsiveness"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, suggestions for improvement"}]},"linkedPortfolio":null,"description":"Worked for an employer from United States in a ","clientId":"843792","isPrivate":false,"agencyName":null,"status":null,"initialAmount":{"currencyCode":"USD","amount":11},"hoursPerWeek":0,"openingRid":"206149419","skills":null,"totalEarnings":null,"blendedChargeRate":null,"blendedEarnRate":null,"feedbackGiven":{"score":5,"comment":"Wonderful client. I would be willing to work with this client again.","commentIsPublic":true,"response":null,"scoreDetails":[{"score":5,"label":"Skills","description":"competency and skills for the job, understanding of task complexities"},{"score":5,"label":"Quality","description":"quality of specifications\/instructions"},{"score":5,"label":"Availability","description":"online presence on a consistent schedule"},{"score":5,"label":"Deadlines","description":"understanding of complexities and trade-offs"},{"score":5,"label":"Communication","description":"communication skills and responsiveness, feedback and guidance"},{"score":5,"label":"Cooperation","description":"cooperation and flexibility, open to suggestions for improvement"}]},"id":"15436511","isEdc":false,"ciphertext":"~0199df442f25d26fe0","isPtc":false,"isOpeningVisible":true,"accessType":1}],"filterClientAssignments":false},"assignmentsSelected":null},"userId":"641323657512689664","userRid":"8654824","isOwner":false,"isViewAsOthers":false,"isVisitor":true,"isFreelancer":false,"isClient":false,"isAgency":false,"isHideEarnings":false,"refererUrl":null,"firstName":null,"lastName":null,"isPhoneVerified":null,"startInEditMode":false,"profileUrl":"https:\/\/www.upwork.com\/o\/profiles\/users\/_~01e200ab864accf375\/","qualifiesForCustomUrl":null,"qt":[],"ff":{"ShowFreelancerTotalHoursUpdated":false,"showClientAssignmentsOnly":false,"FP6777FsHideEarnings":true,"FP8147DisplayFLEarnings":true,"FP7853ProfileInterviewWidget":true,"ResponsiveStatsFreelancerShorten":true,"FP8328BasicSkillsTest":false,"FP9310NewSaveFLButton":true,"FP9553HideFreelancerLastName":true,"contractWorkroom":true},"referer":"https:\/\/www.upwork.com\/","reportProject":null,"phoneRequired":false,"ShowAggregateRatingSchema":true,"FP3162LiveChatWidget":false,"ReplacePublicAggFeedbackWithNss":true,"isEnterprise":null,"isTopRated":false,"projectUid":false,"utimezoneOffset":null,"isACE":false,"isOnboardingV2":false,"clientName":"","clientJobs":[],"isProfileOnTempHoldState":false,"isHireButtonDisabled":false,"areClientControlsHidden":false,"interviewInvitationDataFromKVLkey":null,"rateMinValue":null,"rateMaxValue":null,"facebookAppId":null,"recommendedOpeningRids":null}};
+        var angularCache = [];
+        var assetsVersion = null;
+        var assetsBaseUrl = "";
+        var instanceEnv = "prod";
+
+        var buildBundlePath = function(path) {
+            var bundleRegex = /^@([^\/]*)Bundle\/(.*)$/;
+            var matches = bundleRegex.exec(path);
+
+            if (matches != null) {
+                return '/bundles/' + matches[1].toLowerCase() + '/' + matches[2];
+            }
+            return path;
+        };
+
+        this.getBasePath = function() {
+            return basePath;
+        };
+
+        this.buildPath = function(path) {
+            // CDN assets
+            if (assetsBaseUrl) {
+                return assetsBaseUrl + '/' + assetsVersion + buildBundlePath(path);
+            }
+
+            // Local assets
+            var url = basePath + buildBundlePath(path);
+            if (assetsVersion) {
+                if (url.indexOf('?') < 0) {
+                    return url + '?' + assetsVersion;
+                } else {
+                    return url + '&' + assetsVersion;
+                }
+            }
+            return url;
+        };
+
+        var visitorId = null;
+                visitorId = "78.144.76.73.1491763151614891";
+        
+        this.getVisitorId = function() {
+            return visitorId;
+        };
+
+        var visitorApiKey = null;
+                    visitorApiKey = "6aaeb635f38a8af3dbf199012f03e640";
+                this.getVisitorApiKey = function() {
+            return visitorApiKey;
+        };
+
+
+        var User = null;
+        
+        this.getUser = function() {
+            return User;
+        };
+
+        var Organization = null;
+        
+        this.getOrganization = function() {
+            return Organization;
+        };
+
+        this.getVar = function(key) {
+            return phpVars[key];
+        };
+
+        this.getAngularCache = function() {
+            return angularCache;
+        };
+
+        this.getInstanceEnv = function() {
+            return instanceEnv;
+        }
+    };
+</script>
+            <script src="//cdn.optimizely.com/js/2765661494.js" async></script>
+
+                
+</head>
+<body data-ng-app="fe.app.profile" class=" visitor-layout">
+                            
+                    <script>
+                dataLayer = [{"site":{"application":"UserProfileBinder","version":"1b30ac2e669fe61ddad7c0f3f031129b2180a43c","environment":"prod"},"user":{"visitor_id":"78.144.76.73.1491763151614891","recognized":false,"internal":false,"loggedIn":false},"br_data.ptype":"product","br_data.cat_id":"freelancers","br_data.search_term":"android-app-development|java|c++|c|opengl|sdlx|css3|html5|bootstrap|javascript","br_data.prod_id":"~01e200ab864accf375","br_data.prod_name":"Ali F."}];
+            </script>
+        
+                    <!-- Google Tag Manager -->
+            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TC7GHX&amp;site.application=UserProfileBinder&amp;site.version=1b30ac2e669fe61ddad7c0f3f031129b2180a43c&amp;site.environment=prod&amp;user.visitor_id=78.144.76.73.1491763151614891&amp;user.recognized=&amp;user.internal=&amp;user.loggedIn=&amp;br_data.ptype=product&amp;br_data.cat_id=freelancers&amp;br_data.search_term=android-app-development%7Cjava%7Cc%2B%2B%7Cc%7Copengl%7Csdlx%7Ccss3%7Chtml5%7Cbootstrap%7Cjavascript&amp;br_data.prod_id=%7E01e200ab864accf375&amp;br_data.prod_name=Ali+F." height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TC7GHX');</script>
+            <!-- End Google Tag Manager -->
+                <script type="text/javascript">
+    (function(){
+        window._pxAppId = "PXSs13U803";        var p = document.getElementsByTagName('script')[0],
+        s = document.createElement('script');
+        s.async = 1;
+        s.src = '//client.perimeterx.net/PXSs13U803/main.min.js';
+        p.parentNode.insertBefore(s,p);
+    }());
+</script>        <div id="layout">
+                    <div data-o-smf data-o-smf-location="very_top"></div>
+                    <header class="header-navbar-visitor" role="banner" data-ng-controller="skinnyHeaderController">
+        <nav role="navigation" class="navbar navbar-default primary-navbar">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#visitor-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">Upwork</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="visitor-nav">
+
+                        <div data-o-freelancer-search data-o-freelancer-search-selected="currentOption" data-align="left" data-is-search-expanded="true" data-keep-focus-on-dropdown-toggle="false">
+                <div data-o-freelancer-search-option data-label="Jobs" data-url="/o/jobs/browse/" data-placeholder="Find Jobs"></div>
+                <div data-o-freelancer-search-option data-label="Freelancers" data-url="/o/profiles/browse/" data-placeholder="Find Freelancers" data-selected="true"></div>
+            </div>
+
+            <ul class="nav navbar-nav" role="menu" data-eo-click-out="toggleBrowseMenu()" data-eo-click-out-disable="!isBrowseMenuOpen">
+                <li data-o-sub-menu>
+                    <a href="#" data-ng-click="toggleBrowseMenu()" data-ng-class="{ 'active': isBrowseMenuOpen }">Browse</a>
+                    <ul class="sub-menu list-unstyled">
+                        <li class="tile">
+                            <span data-o-sub-menu-item="" data-o-sub-menu-item-active="currentOption.label === 'Freelancers'">Browse Categories</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/cat/developers/">Web Developers</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/mobile-developers/">Mobile Developers</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/designers/">Designers &amp; Creatives</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/writing/">Writers</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/administrative-support/">Virtual Assistants</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/customer-service/">Customer Service Agents</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/sales-marketing/">Sales &amp; Marketing Experts</a>
+                                </li>
+                                <li>
+                                    <a href="/cat/accounting-consulting/">Accountants &amp; Consultants</a>
+                                </li>
+                                <li>
+                                    <a href="/i/freelancer-categories/">View All Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tile">
+                            <span data-o-sub-menu-item="">Browse Freelancers</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/o/profiles/browse/c/web-mobile-software-dev/">Web, Mobile &amp; Software Dev</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/it-networking/">IT &amp; Networking</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/data-science-analytics/">Data Science &amp; Analytics</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/engineering-architecture/">Engineering &amp; Architecture</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/design-creative/">Design &amp; Creative</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/writing/">Writing</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/translation/">Translation</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/legal/">Legal</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/admin-support/">Admin Support</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/customer-service/">Customer Service</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/sales-marketing/">Sales &amp; Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/c/accounting-consulting/">Accounting &amp; Consulting</a>
+                                </li>
+                                <li>
+                                    <a href="/o/profiles/browse/">View All Freelancers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tile">
+                            <span data-o-sub-menu-item="" data-o-sub-menu-item-active="currentOption.label === 'Jobs'">Browse Jobs</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/o/profiles/browse/c/web-mobile-software-dev/">Web, Mobile &amp; Software Dev</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/it-networking/">IT &amp; Networking</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/data-science-analytics/">Data Science &amp; Analytics</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/engineering-architecture/">Engineering &amp; Architecture</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/design-creative/">Design &amp; Creative</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/writing/">Writing</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/translation/">Translation</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/legal/">Legal</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/admin-support/">Admin Support</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/customer-service/">Customer Service</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/sales-marketing/">Sales &amp; Marketing</a>
+                                </li>
+                                <li>
+                                    <a href="/o/jobs/browse/c/accounting-consulting/">Accounting &amp; Consulting</a>
+                                </li>
+                                <li>
+                                    <a href="/i/job-categories/">View All Categories</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="tile">
+                            <span data-o-sub-menu-item="">Trending Skills</span>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a href="/hire/android-developers/">Android Developers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/bookkeepers/">Bookkeepers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/content-writers/">Content Writers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/data-science-freelancers/">Data Scientists</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/frontend-development-freelancers/">Front End Developers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/graphic-designers/">Graphic Designers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/ios-developers/">iOS Developers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/seo-experts/">SEO Experts</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/ui-designers/">UI Designers</a>
+                                </li>
+                                <li>
+                                    <a href="/hire/ux-designers/">UX Designers</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/i/how-it-works/client/">How it works</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right m-0-left-right">
+                <li>
+                    <a href="/i/how-it-works/freelancer/" class="btn btn-default m-0-left-right">
+                        Become a freelancer
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/signup/create-account"><span class="glyphicon air-icon-signup"></span>Sign Up</a>
+                </li>
+                <li>
+                    <a href="/login"><span class="glyphicon air-icon-login "></span>Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    </header>
+         <script type="text/javascript">remove_mark('navCompRenderEnd');remove_measure('navCompRendered');create_mark('navCompRenderEnd');create_measure('navCompRendered', 'navigationStart', 'navCompRenderEnd');</script>
+
+        
+                    <div class="container">
+            <div data-o-smf data-o-smf-location="top"></div>
+<div data-ng-controller="fe.app.profile.ProfileDetailsCtrl as vm">
+    <div>
+        <section class="o-profile-section" ng-if="vm.error" ng-cloak>
+            <article>
+                <div class="alert alert-danger" role="alert">
+                    Sorry, something went wrong. Please
+                    <a href="https://support.upwork.com/anonymous_requests/new" target="_blank">
+                        contact support
+                    </a>.
+                </div>
+            </article>
+        </section>
+
+                    <div ng-if="vpd">
+    <div>
+                <div class="row m-lg-bottom" data-ng-if="vpd.ready &amp;&amp; actor.isVisitor()">
+            <div class="col-md-12">
+                <a href="https://www.upwork.com/">
+                    <span class="vertical-align-text-bottom glyphicon air-icon-arrow-prev-circle"></span>Back to search results
+                </a>
+            </div>
+        </div>
+        
+        
+        <div id="oProfilePage" class="row o-profile clearfix">
+            <div class="col-md-9" itemscope itemtype="http://schema.org/Person">
+                <div id="optimizely-header-container-default" class="m-0-top m-0-right media air-card">
+                    <div class="clearfix">
+                        <div class="pull-left m-0">
+                                                            <img id="userPortrait" src="https://odesk-prod-portraits.s3.amazonaws.com/Users:alifarooq96:PortraitUrl_100?AWSAccessKeyId=1XVAX3FNQZAFC9GJCFR2&amp;Expires=2147483647&amp;Signature=QS3%2BnFIysffQ6Yt6fRor7%2FIRN7E%3D&amp;1441745077085262" alt="Ali F." class="avatar avatar-lg m-0-top m-0-left">
+                                                    </div>
+
+                        <div class="media-body up-active-container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h2 class="m-0-top m-md-bottom">
+                                <span class="up-active-context up-active-context-title">
+                                    <span itemprop="name">
+                                        Ali F.
+                                    </span>
+                                </span>
+                                    </h2>
+                                </div>
+                                <div class="col-md-4 p-0-left">
+                                    <h2 class="pull-right m-0-top-bottom up-active-context ">
+                                                                                    <span class="pull-right">
+                                    <span itemprop="pricerange">
+                                                                                    $33.00
+                                                                            </span>
+                                    <span class="text-muted"> /hr</span>
+                                </span>
+                                                                            </h2>
+                                </div>
+                            </div>
+                            <h3 class="m-0-top m-sm-bottom" data-ng-click="openEditTitleModal()">
+                        <span>
+                            Web Development, ASP.NET MVC C#, C/C++, Android Dev,  iOS dev
+                        </span>
+                            </h3>
+                        </div>
+                        <div class="media-body">
+                            <span class="glyphicon glyphicon-md air-icon-location m-0-left-right"></span>
+                            <span data-ng-if="vpd.profile.location.city">
+                                <span itemprop="locality">islamabad</span>,
+                            </span>
+                                                            <span itemprop="country-name">Pakistan</span>
+                                                    </div>
+                        <div class="media-body">
+                            <div>
+                                <div class="o-profile-skills m-sm-top">
+                                    <span class="up-active-context display-inline-block">
+                                                                                    <small class="o-tag ng-binding m-0-right m-xs-left m-sm-top-bottom o-tag-certified ">
+                                                Android App Development
+                                            </small>
+                                                                                    <small class="o-tag ng-binding m-0-right m-xs-left m-sm-top-bottom o-tag-certified ">
+                                                Java
+                                            </small>
+                                                                                    <small class="o-tag ng-binding m-0-right m-xs-left m-sm-top-bottom o-tag-certified ">
+                                                C++
+                                            </small>
+                                                                                    <small class="o-tag ng-binding m-0-right m-xs-left m-sm-top-bottom o-tag-certified ">
+                                                C
+                                            </small>
+                                                                                    <small class="o-tag ng-binding m-0-right m-xs-left m-sm-top-bottom o-tag-certified ">
+                                                OpenGL
+                                            </small>
+                                                                            </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="m-sm-top">
+                    </div>
+
+
+                    <div class="up-active-container">
+                        <h2 class="m-0-top m-md-bottom">
+                            <div class="up-active-context display-inline-block">
+                                <span ng-click="openEditOverviewDialog()">Overview</span>
+                            </div>
+                        </h2>
+
+                                                    <section class="p-lg-right">
+                                <p class="o-break-word o-white-space-pre-line up-active-context m-0-bottom" itemprop="description">Currently the CEO/senior programmer at "AlfaBolt". A small firm based in Islamabad, Pakistan which focuses on innovative IT solutions
+
+***PAST EXPERIENCE***
+Senior Developer - Chartertree
+Director Web &amp; IT - NUST Internations Model United Nations
+Director Web &amp; IT UNIDO - BGT International Conference
+Former Web &amp; IT director at Beijing Forum, Islamabad.
+Senior Developer - ALMIN Apps.
+Senior Developer - RJ Applications
+Senior Tutorial manager for SHAUN SPALDING
+
+My expertise include web design and server side  development, mobile app d
+                                </p>
+                            </section>
+                                            </div>
+                </div>
+
+                                    <h5>
+                        <span class="o-icon-portfolios"></span>
+                        <strong>Ali F. has added 9 portfolio piece1.</strong>
+                        <a data-olog-trigger="click" data-olog-name="click" data-olog-location="visitor_freelancer_profile" data-olog-sublocation="freelancer_profile_portfolio_signup_cta" data-olog-data='{"type":"contractor", "id":"8654824"}' href="/signup/view-profile/id/~01e200ab864accf375">Create an account to review 1.</a>
+                    </h5>
+                            </div>
+
+            <div class="col-md-3">
+                
+                                    <section class="m-lg-bottom">
+                        <a class="btn btn-primary btn-block m-0-top m-md-bottom" data-olog-trigger="click" data-olog-name="click" data-olog-location="visitor_freelancer_profile" data-olog-sublocation="freelancer_profile_header_contact_cta" data-olog-data='{"type":"contractor", "id":"8654824"}' data-mixpanel-trigger="click" data-mixpanel-event="Clicked CTA" data-mixpanel-data='{"CTA Location": "Freelancer Profile", "CTA Sublocation": "Freelancer Profile Sidebar", "CTA Name": "Contact", "Client Sign Up Flow": "Contact flow"}' href="/signup/contact-contractor/id/~01e200ab864accf375/va/cpp">Contact
+                        </a>
+                    </section>
+                
+                
+
+
+                
+                                    <hr class="m-lg-top-bottom">
+                            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        remove_mark('mainContentRendered_End');remove_measure('mainContentRendered');create_mark('mainContentRendered_End');create_measure('mainContentRendered', 'navigationStart', 'mainContentRendered_End');
+    </script>
+</div>
+        
+        <fe-profile ng-if="vm.isShowProfile()" fe-vpd="vm.overlay.vpd" fe-settings="vm.overlay.settings">
+                        <fe-sidebar-post-job-slot class="ng-cloak">
+            
+
+<section id="registration-form" class="std-init-reg-form ">
+    <div ng-controller="RegFormController as vm">
+        <div class="text-center">
+          <h3 class="title ">
+            To discuss your project with Ali F. sign up.
+          </h3>
+                      <p class="subtitle ">
+              We'll connect you two when the job is posted.
+            </p>
+                  </div>
+        <form name="std_init_reg_form" method="post" ng-submit="vm.submit()" novalidate="">
+          <div eo-block="{{vm.isBlocked()}}" class="">
+            
+            <div class="form-group m-0-bottom p-sm-bottom">            <input type="text" id="std_init_reg_form_firstName" name="std_init_reg_form[firstName]" ng-model="vm.model.firstName" class="form-control" placeholder="First Name"><div aq-signup-error="firstName"></div>
+  </div><div class="form-group m-0-bottom p-sm-bottom">            <input type="text" id="std_init_reg_form_lastName" name="std_init_reg_form[lastName]" ng-model="vm.model.lastName" class="form-control" placeholder="Last Name"><div aq-signup-error="lastName"></div>
+  </div><div class="form-group m-0-bottom p-sm-bottom">            <input type="text" id="std_init_reg_form_email" name="std_init_reg_form[email]" ng-model="vm.model.email" class="form-control" placeholder="Email"><div aq-signup-error="email"></div>
+  </div>            <input type="hidden" id="std_init_reg_form_referrer" name="std_init_reg_form[referrer]" ng-initialize-model="" ng-model="vm.model.referrer" class="form-control" placeholder="" value="https://www.upwork.com/o/profiles/users/_~01e200ab864accf375/">            <input type="hidden" id="std_init_reg_form_freelancerRef" name="std_init_reg_form[freelancerRef]" ng-initialize-model="" ng-model="vm.model.freelancerRef" class="form-control" placeholder="" value="~01e200ab864accf375"><div>    <button ng-class='{"disabled" : vm.btnDisabled()}' class="btn btn-primary m-0-top-bottom m-0-left-right">Contact</button></div>
+          </div>
+        </form>
+        <div class="post-a-job m-md-top m-lg-bottom">
+          or, <a href="/signup/?dest=job-posting"><strong>Post a Job</strong></a>
+                      <span class="glyphicon-md air-icon-question-circle" eo-popover-html-unsafe="Make your project instantly visible to all active freelancers. The fastest and best way to attract a group of interested applicants." eo-popover-append-to-body="true" eo-popover-trigger="mouseenter">
+            </span>
+                  </div>
+    </div>
+</section>
+ 
+            </fe-sidebar-post-job-slot>
+                    </fe-profile>
+    </div>
+</div>
+        </div>
+                <style>
+  .bloomreach-section {
+    display: none;
+    margin-bottom: 34px;
+    margin-top: -40px;
+  }
+  .bloomreach-section .br-widget-wrapper {
+    margin-top: -3px;
+    padding-right: 40px;
+  }
+  .bloomreach-section .br-headline,
+  .bloomreach-section #br-related-searches-widget,
+  .bloomreach-section .br-related-query {
+    display: inline;
+  }
+  .bloomreach-section .br-headline,
+  .bloomreach-section a,
+  .bloomreach-section .br-related-query:not(:last-of-type):after {
+    color: #7d7d7d;
+    font-family: 'Gotham SSm';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .bloomreach-section .br-headline {
+    font-weight: bold;
+  }
+  .bloomreach-section a:hover {
+    text-decoration: underline;
+  }
+  .bloomreach-section .br-related-query:not(:last-of-type):after {
+    color: #b2b2b2;
+    content: "•"
+  }
+</style>
+
+<section class="bloomreach-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="br-widget-wrapper">
+          <p class="br-headline">Related:</p>
+          <!-- BEGIN RELATED -->
+<script type="text/javascript">var br_related_rid = "Ri41zjxozxrd7uwukc22o-uf,r1,m1";</script>
+<script type="text/javascript">var br_iuid = "aHR0cHM6Ly93d3cudXB3b3JrLmNvbS9vL3Byb2ZpbGVzL3VzZXJzL19+MDFlMjAwYWI4NjRhY2NmMzc1Lw==";</script>
+
+<div id="br-related-searches-widget">
+  
+  <div class="br-related-query">
+    <a class="br-related-query-link" href="/o/profiles/users/_~0135fe7fe8faabf3c0/" target="_self">expert django .net developer automation scraper</a>
+  </div>
+  <div class="br-related-query">
+    <a class="br-related-query-link" href="/o/profiles/users/_~01845e52a8c778baa8/" target="_self">microsoft.net professional specializing in technical writing</a>
+  </div>
+  <div class="br-related-query">
+    <a class="br-related-query-link" href="/o/profiles/users/_~01072451c5ca7352b2/" target="_self">full stack developer asp.net c sql</a>
+  </div>
+  <div class="br-related-query">
+    <a class="br-related-query-link" href="/o/profiles/users/_~015d28db26448e9ff2/" target="_self">mvc angular xamarin asp.net</a>
+  </div>
+  <div class="br-related-query">
+    <a class="br-related-query-link" href="/fl/anastasiianovikova" target="_self">magento booking services .net erp</a>
+  </div>
+  <div class="br-related-query">
+    <a class="br-related-query-link" href="/o/profiles/users/_~01b3a94378af2b7af9/" target="_self">asp.net mvc c expert</a>
+  </div>
+</div>
+<!-- END RELATED -->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function brInitHandler() {
+    var relatedSearches = document.querySelectorAll(".bloomreach-section .br-related-query");
+    if (relatedSearches.length > 0) {
+      document.querySelector(".bloomreach-section").style.display = "block";
+    }
+  }
+  window.addEventListener("load", brInitHandler);
+</script>
+
+    
+        <div id="layout-footer"></div>
+    </div>
+
+        <footer class="footer-navbar-wrapper footer-visitor" role="contentinfo">
+        <div class="container">
+    <section>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row links-section">
+                    <div class="col-md-3">
+                        <h2>Company Info</h2>
+                        <p><a href="/about/">About Us</a></p>
+                        <p><a href="/press/">Press</a></p>
+                        <p><a href="/about/careers/">Careers</a></p>
+                        <p><a href="/blog/">Upwork Blog</a></p>
+                        <p><a href="/legal/terms/">Terms of Service</a></p>
+                        <p><a href="/legal/privacy/">Privacy Policy</a></p>
+                        <p><a href="/hiring/" target="_blank">Hiring Headquarters</a></p>
+                        <p><a href="/press/quarterly-skills-index/">Online Work Report</a></p>
+                    </div>
+                    <div class="col-md-4 col-md-offset-1">
+                        <div class="p-lg-left">
+                            <h2>Additional Services</h2>
+                            <p><a href="/pro/">Upwork Pro</a></p>
+                            <p><a href="/enterprise/" target="_blank">Enterprise Solutions</a></p>
+                            <p><a href="/i/business-resources/" target="_self">Local Business Resources</a></p>
+                            <h2 class="m-lg-top">Connect with us</h2>
+                            <p><a href="https://support.upwork.com/home">Contact &amp; Support</a></p>
+                            <p><a href="/info/about/partners/">Partners</a></p>
+                            <p><a href="https://developers.upwork.com/">API Center</a></p>
+                            <p><a href="/i/mobile/">Mobile App</a></p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-offset-1">
+                        <h2>Browse</h2>
+                        <p><a href="/i/freelancer-categories/">Freelancers by Skill</a></p>
+                        <p><a href="/local/united-states/">Freelancers in USA</a></p>
+                        <p><a href="/local/united-kingdom/">Freelancers in UK</a></p>
+                        <p><a href="/local/canada/">Freelancers in Canada</a></p>
+                        <p><a href="/local/australia/">Freelancers in Australia</a></p>
+                        <p><a href="/i/job-categories/">Find Jobs</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="social-icons-wrapper text-center">
+                    <h2><em>Follow us</em></h2>
+                    <a href="https://plus.google.com/107040851368295259701" target="_blank" title="Add Upwork to Google+ circles"><span class="glyphicon glyphicon-lg air-icon-social-google-plus"></span></a>
+                    <a href="https://www.facebook.com/upwork" target="_blank" title="Visit Upwork on Facebook"><span class="glyphicon glyphicon-lg air-icon-social-facebook"></span></a>
+                    <a href="https://www.linkedin.com/company/upwork" target="_blank" title="Read Upwork company news on LinkedIn"><span class="glyphicon glyphicon-lg air-icon-social-linkedin"></span></a>
+                    <a href="https://twitter.com/Upwork" target="_blank" title="Follow @Upwork on Twitter"><span class="glyphicon glyphicon-lg air-icon-social-twitter"></span></a>
+                    <a href="https://www.youtube.com/channel/UCvxGFOnwUBDHHcxuPqhe4CQ" target="_blank" title="Watch Upwork videos on YouTube"><span class="glyphicon glyphicon-lg air-icon-social-youtube"></span></a>
+                </div>
+                <p class="text-center copyright">
+                    © 2015 - 2017 Upwork Global Inc.
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+    </footer>
+
+                            <script src=""></script>
+                    <script src=""></script>
+                    <script src="https://www.upwork.com/static/components/2.6.0/angular-all.1.5.9.min.js"></script>
+            
+    <script src="https://www.upwork.com/static/fe/webpack/release/rel20170405125416934/profile-vendor-es6.min.js"></script>
+    <script src="https://www.upwork.com/static/fe/webpack/release/rel20170405125416934/profile-es6.min.js"></script>
+    <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+    mixpanel.init("fdf88b8da1749bafc5f24aee259f5aa4");</script><!-- end Mixpanel -->
+<script>
+    angular.module('mixpanel', [])
+            .service('mixpanel', function() {
+                return {
+                    track: function(title, parameters) {
+                        mixpanel.track(title, parameters);
+                    }
+                };
+            });
+</script>
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8e23a381b9","applicationID":"12371618","transactionName":"NVxRMRBYVhBXUhBQDAwWcgYWUFcNGUERWw8LWmwVEFZeClpUO0oGDQ==","queueTime":0,"applicationTime":785,"atts":"GRtSR1hCRR4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
