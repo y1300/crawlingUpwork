@@ -1,19 +1,34 @@
-## Codes
-
 # Crawling User Ids
+
 ### getId.py
 To get IDs of freelancers used in the website. Should run several times to crawl as much ids as possible, due to limited number (500) of pages we can access at all times, the dynamical ordering of this IDs. Hidden IDs located in pages inaccessible can show up sometimes. These intermedia results are written in "Output.txt".
-
 ### getId_tor.py
 To get IDs with dynamic ip addresses via Tor network. Increasing the chance of being blocked. These intermedia results are written in "Output.txt".
-
 ### getUniqueId.py
 To get IDs with no repetition from "Output.txt". Unique IDs are in "ids.txt"
 
 # Crawling Detailed Profiles
 
+### main.py
+The main script to execute 4 kinds of crawling procedures. Default: To get all profiles after login.
+### CrawlingDetailedProfiles/scrapyUpwork/spiders/
+Here are where our spiders located, 
+ - getIndependent.py: the default spider to get all profiles after login
+ - getIndependent_test.py: to test whether extracting profiles after login could be successful
+ - getIndependent_withoutLogin.py: former crawling witout login
+ - getLogin.py: to get a login page. Examples of pages extracted are shown in crawlingUpwork/CrawlingDetailedProfiles/ as login.html, exampleProfile.html and exampleProfile_login.html.
+ 
+# Sentiment Analysis
+Needs to run sentiment analysis with items.jl in this folder
 
-## Output
+### loadDescription.py
+To load profiles with descriptions of each freelancer, will produce description.p as a intermedium
+### loadComment.py
+To load profiles with comments on their previous jobs of each freelancer, will produce assignments_feedback_comment.p as a intermedium
+### rankBySenti.py
+To rank all the freelancers based on their descriptions(default) or comments. Will produce rankedBySentiments.txt as a ranking result.
+
+# Output
 
 ### items.jl
 items.jl is just a plain text file with each freelancer's profile on one line, the structure of each item is "key": "value" with commas separating itmes from each other.
@@ -63,7 +78,3 @@ The structure of the list is: each line represent one freelancer, consisting by 
     
 ### Image
 The image.tar.gz contains all the portraits of the freelancers based in China (around 92% of them has uploaded photos), and the folder image/full contains a few examples of these photos.
-
-## Clone
-
-    $ git clone git://github.com/y1300/crawlingUpwork.git
